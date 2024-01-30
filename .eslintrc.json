@@ -1,0 +1,33 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "jsx": "react"
+  },
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "no-console": "error"
+  },
+  "globals": {
+    "window": true,
+    "fetch": true,
+    "Headers": true,
+    "document": true,
+    "jsdom": true,
+    "JSX": true,
+    "React": true
+  }
+}
