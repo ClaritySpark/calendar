@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.browser.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "outDir": "./lib",
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", ".eslintrc.js"],
   "files": ["src/index.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "lib"],
 }
