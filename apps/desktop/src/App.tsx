@@ -1,4 +1,4 @@
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <header className="App-header">
@@ -8,14 +8,14 @@ function App() {
         <a
           className="App-link"
           href="https://reactjs.org"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Learn React
         </a>
       </header>
     </div>
   );
-}
+};
 
 export default App;
