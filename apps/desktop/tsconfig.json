@@ -1,8 +1,0 @@
-{
-  "extends": "../../tsconfig.browser.json",
-  "compilerOptions": {
-    "outDir": "./lib",
-  },
-  "include": ["src", ".eslintrc.js"],
-  "exclude": ["node_modules", "build/*", "public/*"],
-}
