@@ -2,16 +2,25 @@
   "name": "oltyy-calendar",
   "version": "0.0.1",
   "main": "src/index.ts",
+  "description": "oltty calendar",
   "scripts": {
     "build": "pnpm compile",
     "compile": "tsc -p tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClaritySpark/calendar"
+  },
+  "keywords": [
+    "calendar",
+    "react calendar"
+  ],
+  "homepage": "https://oltyycalendar.com/",
+  "author": "<pmhxxhsj@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@oltyy-calendar/ui": "workspace:*",
-    "@oltyy-calendar/utils": "workspace:*",
-    "@oltyy-calendar/types": "workspace:*"
+    "@oltyy-calendar/ui": "../ui",
+    "@oltyy-calendar/utils": "../utils",
+    "@oltyy-calendar/types": "../types"
   }
 }

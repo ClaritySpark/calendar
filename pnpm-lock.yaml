@@ -61,13 +61,13 @@ importers:
   packages/oltyy-calendar:
     dependencies:
       '@oltyy-calendar/types':
-        specifier: workspace:*
+        specifier: ../types
         version: link:../types
       '@oltyy-calendar/ui':
-        specifier: workspace:*
+        specifier: ../ui
         version: link:../ui
       '@oltyy-calendar/utils':
-        specifier: workspace:*
+        specifier: ../utils
         version: link:../utils
 
   packages/types: {}
