@@ -58,6 +58,18 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
 
+  packages/oltyy-calendar:
+    dependencies:
+      '@oltyy-calendar/types':
+        specifier: workspace:*
+        version: link:../types
+      '@oltyy-calendar/ui':
+        specifier: workspace:*
+        version: link:../ui
+      '@oltyy-calendar/utils':
+        specifier: workspace:*
+        version: link:../utils
+
   packages/types: {}
 
   packages/ui:

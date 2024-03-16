@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "oltyy-calendar/types": ["./src/types/*"],
+      "oltty-calendar/ui": ["./src/ui/*"],
+      "oltty-calendar/utils": ["./src/utils/*"],
+    },
+  },
+  "extends": "../../tsconfig.browser.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+}

@@ -1,0 +1,17 @@
+{
+  "name": "oltyy-calendar",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "pnpm compile",
+    "compile": "tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@oltyy-calendar/ui": "workspace:*",
+    "@oltyy-calendar/utils": "workspace:*",
+    "@oltyy-calendar/types": "workspace:*"
+  }
+}
