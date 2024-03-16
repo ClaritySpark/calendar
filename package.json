@@ -1,5 +1,5 @@
 {
-  "name": "clarity-calendar",
+  "name": "oltty-calendar",
   "private": true,
   "scripts": {
     "build": "turbo build",

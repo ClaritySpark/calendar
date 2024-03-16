@@ -2,9 +2,17 @@ import { Button } from "@clarity/calendar-ui";
 
 export default function App() {
   return (
-    <>
-      <h1>Calendar</h1>
-      <Button type="button">Start</Button>
-    </>
+    <main
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
+      <h1>Oltyy Calendar</h1>
+      <Button type="button">Get Started</Button>
+    </main>
   );
 }
