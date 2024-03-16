@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@clarity/calendar-ui": "workspace:*"
+    "@oltyy-calendar/ui": "workspace:*",
+    "@oltyy-calendar/utils": "workspace:*",
+    "@oltyy-calendar/types": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

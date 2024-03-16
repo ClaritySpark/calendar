@@ -29,9 +29,15 @@ importers:
 
   apps/example:
     dependencies:
-      '@clarity/calendar-ui':
+      '@oltyy-calendar/types':
         specifier: workspace:*
-        version: link:../../packages/calendar-ui
+        version: link:../../packages/types
+      '@oltyy-calendar/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@oltyy-calendar/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -52,7 +58,9 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
 
-  packages/calendar-ui:
+  packages/types: {}
+
+  packages/ui:
     dependencies:
       react:
         specifier: ^18.2.0
@@ -70,9 +78,8 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.18
         version: 18.2.21
-      typescript:
-        specifier: 5.3.3
-        version: 5.3.3
+
+  packages/utils: {}
 
 packages:
 

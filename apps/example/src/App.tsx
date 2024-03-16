@@ -1,4 +1,4 @@
-import { Button } from "@clarity/calendar-ui";
+import { Button } from "@oltyy-calendar/ui";
 
 export default function App() {
   return (
