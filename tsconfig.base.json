@@ -8,7 +8,7 @@
     "noEmitOnError": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "declarations": true,
+    "declaration": true,
     "noUncheckedIndexedAccess": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
