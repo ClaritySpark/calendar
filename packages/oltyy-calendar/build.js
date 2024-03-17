@@ -14,11 +14,13 @@ Promise.all([
     outExtension: {
       ".js": ".cjs",
     },
+    minify: true,
   }),
   // esm
   esbuild.build({
     ...baseConfig,
     format: "esm",
+    minify: true,
   }),
 ]).catch(() => {
   console.log("Build failed");
