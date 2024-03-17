@@ -1,1 +1,1 @@
-export * from "@oltyy-calendar/ui";
+export * from "./Button";

@@ -1,1 +1,1 @@
-export * from "@oltyy-calendar/types";
+export * from "./calendar";

@@ -29,15 +29,9 @@ importers:
 
   apps/example:
     dependencies:
-      '@oltyy-calendar/types':
+      oltyy-calendar:
         specifier: workspace:*
-        version: link:../../packages/types
-      '@oltyy-calendar/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@oltyy-calendar/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
+        version: link:../../packages/oltyy-calendar
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -60,20 +54,6 @@ importers:
 
   packages/oltyy-calendar:
     dependencies:
-      '@oltyy-calendar/types':
-        specifier: ../types
-        version: link:../types
-      '@oltyy-calendar/ui':
-        specifier: ../ui
-        version: link:../ui
-      '@oltyy-calendar/utils':
-        specifier: ../utils
-        version: link:../utils
-
-  packages/types: {}
-
-  packages/ui:
-    dependencies:
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -90,8 +70,21 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.18
         version: 18.2.21
-
-  packages/utils: {}
+      '@typescript-eslint/parser':
+        specifier: 6.20.0
+        version: 6.20.0(eslint@8.56.0)(typescript@5.3.3)
+      '@vercel/style-guide':
+        specifier: 5.2.0
+        version: 5.2.0(eslint@8.56.0)(prettier@3.2.4)(typescript@5.3.3)
+      eslint:
+        specifier: ^8.48.0
+        version: 8.56.0
+      prettier:
+        specifier: ^3.2.4
+        version: 3.2.4
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
 
 packages:
 

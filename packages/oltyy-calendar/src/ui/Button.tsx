@@ -1,5 +1,4 @@
 import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
-import React from "react";
 
 type Props = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>;
 

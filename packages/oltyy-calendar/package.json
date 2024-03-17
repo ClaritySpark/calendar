@@ -1,10 +1,34 @@
 {
   "name": "oltyy-calendar",
-  "version": "0.0.1",
-  "main": "src/index.ts",
+  "version": "0.0.11",
+  "license": "MIT",
   "description": "oltty calendar",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    ">=4.8": {
+      "types": [
+        "./dist/types/index.d.ts"
+      ],
+      "ui": [
+        "./dist/ui/index.d.ts"
+      ],
+      "utils": [
+        "./dist/utils/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.d.ts",
+      "default": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "pnpm compile",
+    "build:base": "rollup -c",
     "compile": "tsc -p tsconfig.json"
   },
   "repository": {
@@ -17,10 +41,23 @@
   ],
   "homepage": "https://oltyycalendar.com/",
   "author": "<pmhxxhsj@gmail.com>",
-  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
-    "@oltyy-calendar/ui": "../ui",
-    "@oltyy-calendar/utils": "../utils",
-    "@oltyy-calendar/types": "../types"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3",
+    "@typescript-eslint/parser": "6.20.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.2.4",
+    "@vercel/style-guide": "5.2.0"
   }
 }
