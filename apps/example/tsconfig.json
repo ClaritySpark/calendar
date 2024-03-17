@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "lib": ["es2016", "esnext", "dom"],
   },
   "extends": "../../tsconfig.base.json",
