@@ -12,9 +12,6 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@oltyy-calendar/ui": "workspace:*",
-    "@oltyy-calendar/utils": "workspace:*",
-    "@oltyy-calendar/types": "workspace:*",
     "oltyy-calendar": "workspace:*"
   },
   "devDependencies": {

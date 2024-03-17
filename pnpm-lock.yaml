@@ -29,15 +29,6 @@ importers:
 
   apps/example:
     dependencies:
-      '@oltyy-calendar/types':
-        specifier: workspace:*
-        version: link:../../packages/types
-      '@oltyy-calendar/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@oltyy-calendar/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       oltyy-calendar:
         specifier: workspace:*
         version: link:../../packages/oltyy-calendar
@@ -88,29 +79,6 @@ importers:
       typescript:
         specifier: 5.3.3
         version: 5.3.3
-
-  packages/types: {}
-
-  packages/ui:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@types/node':
-        specifier: 18.11.18
-        version: 18.11.18
-      '@types/react':
-        specifier: ^18.2.45
-        version: 18.2.64
-      '@types/react-dom':
-        specifier: ^18.2.18
-        version: 18.2.21
-
-  packages/utils: {}
 
 packages:
 
