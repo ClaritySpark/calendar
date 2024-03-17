@@ -15,7 +15,6 @@
     "noUnusedParameters": true,
     "sourceMap": false,
     "target": "ES2021",
-    "rootDir": "src",
     "outDir": "dist",
     "jsx": "react-jsx",
     "baseUrl": ".",
