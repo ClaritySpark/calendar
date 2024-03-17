@@ -1,4 +1,4 @@
-import { Button } from "@oltyy-calendar/ui";
+import { Button } from "oltyy-calendar";
 
 export default function App() {
   return (

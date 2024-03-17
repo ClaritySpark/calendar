@@ -1,0 +1,44 @@
+{
+  "name": "oltyy-calendar",
+  "version": "0.0.12",
+  "description": "oltty calendar",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepack": "pnpm build",
+    "build": "pnpm clean && pnpm build:tsc && pnpm build:js",
+    "build:tsc": "tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClaritySpark/calendar"
+  },
+  "keywords": [
+    "calendar",
+    "react calendar"
+  ],
+  "homepage": "https://oltyycalendar.com/",
+  "author": "<pmhxxhsj@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "5.3.3",
+    "@vercel/style-guide": "5.2.0",
+    "esbuild": "0.20.2"
+  }
+}
