@@ -1,4 +1,4 @@
-import { Button } from "oltyy-calendar";
+import { Button, Calendar } from "oltyy-calendar";
 
 export default function App() {
   return (
@@ -12,6 +12,7 @@ export default function App() {
       }}
     >
       <h1>Oltyy Calendar</h1>
+      <Calendar />
       <Button type="button">Get Started</Button>
     </main>
   );
