@@ -1,55 +1,13 @@
-// TODO: change to interface
-export interface CalendarType {
-  year: number;
-  month: number;
-  day: number;
-  hour: number;
-  minute: number;
-  second: number;
-  millisecond: number;
-  timezone: string;
-  date: string;
-  time: string;
-  datetime: string;
-  timestamp: number;
-  utc: string;
-  iso: string;
-  format: (pattern: string) => string;
-  add: (value: number, unit: string) => CalendarType;
-  subtract: (value: number, unit: string) => CalendarType;
-  startOf: (unit: string) => CalendarType;
-  endOf: (unit: string) => CalendarType;
-  diff: (calendar: CalendarType, unit: string) => number;
-  isBefore: (calendar: CalendarType) => boolean;
-  isAfter: (calendar: CalendarType) => boolean;
-  isSame: (calendar: CalendarType) => boolean;
-  isBetween: (start: CalendarType, end: CalendarType) => boolean;
-  isLeapYear: () => boolean;
-  isDST: () => boolean;
-  isDSTShift: () => boolean;
-  isDSTStart: () => boolean;
-  isDSTEnd: () => boolean;
-  isValid: () => boolean;
-  toArray: () => number[];
-  toJSON: () => string;
-  toString: () => string;
-  valueOf: () => number;
-  toISOString: () => string;
-  toTimestamp: () => number;
-  toTimezone: (timezone: string) => CalendarType;
-  toFormat: (pattern: string) => string;
-  toDay: () => number;
-  toMonth: () => number;
-  toYear: () => number;
-  toHour: () => number;
-  toMinute: () => number;
-  toSecond: () => number;
-  toMillisecond: () => number;
-  toTime: () => string;
-  toDate: () => string;
-  toDatetime: () => string;
-  toUTC: () => CalendarType;
-  toLocal: () => CalendarType;
-  toISO: () => CalendarType;
-  toObject: () => Record<string, number>;
+export interface CalendarProps {
+  data: CalendarEntry[];
+}
+
+export interface CalendarEntry {
+  date: Date;
+  memos: Memo[];
+}
+
+export interface Memo {
+  timestamp: string;
+  content: string;
 }

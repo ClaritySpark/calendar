@@ -1,5 +1,7 @@
 import { Button, Calendar } from "oltyy-calendar";
 
+import { MOCK_DATA } from "./constants/mockData";
+
 export default function App() {
   return (
     <main
@@ -12,7 +14,7 @@ export default function App() {
       }}
     >
       <h1>Oltyy Calendar</h1>
-      <Calendar />
+      <Calendar data={MOCK_DATA} />
       <Button type="button">Get Started</Button>
     </main>
   );
