@@ -1,6 +1,6 @@
 {
   "name": "oltyy-calendar",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "description": "oltty calendar",
   "type": "module",
   "main": "dist/index.js",
