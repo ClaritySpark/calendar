@@ -1,10 +1,12 @@
 import esbuild from "esbuild";
+import { nodeExternalsPlugin } from "esbuild-node-externals";
 
 const baseConfig = {
   entryPoints: ["src/index.ts"],
   outdir: "dist",
   bundle: true,
   sourcemap: true,
+  plugins: [nodeExternalsPlugin()],
 };
 Promise.all([
   // cjs

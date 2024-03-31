@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from "react";
+import React from "react";
 
 const TOTAL_CELLS = 42;
 const HALF_MONTH = 15;
@@ -6,7 +6,7 @@ const WEEK_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export const Calendar = () => {
   const today = new Date();
-  const [currentDate, setCurrentDate] = useState(today);
+  const [currentDate, setCurrentDate] = React.useState(today);
 
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth();
@@ -127,13 +127,13 @@ export const Calendar = () => {
   );
 };
 
-const WrapperStyle: CSSProperties = {
+const WrapperStyle: React.CSSProperties = {
   width: "900px",
   border: "1px solid #7d7d7d",
   borderRadius: "1rem",
 };
 
-const headerStyle: CSSProperties = {
+const headerStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   fontSize: "1.5em",
@@ -141,12 +141,12 @@ const headerStyle: CSSProperties = {
   padding: "1rem",
 };
 
-const buttonWrapper: CSSProperties = {
+const buttonWrapper: React.CSSProperties = {
   display: "flex",
   gap: "0.5rem",
 };
 
-const todayButtonStyle: CSSProperties = {
+const todayButtonStyle: React.CSSProperties = {
   padding: "0.5rem",
   fontSize: "1rem",
   cursor: "pointer",
@@ -154,7 +154,7 @@ const todayButtonStyle: CSSProperties = {
   outline: "none",
 };
 
-const buttonStyle: CSSProperties = {
+const buttonStyle: React.CSSProperties = {
   padding: "0.5rem",
   fontSize: "1rem",
   width: "37px",
@@ -163,13 +163,13 @@ const buttonStyle: CSSProperties = {
   outline: "none",
 };
 
-const weekWrapperStyle: CSSProperties = {
+const weekWrapperStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "flex-end",
 };
 
-const weekStyle: CSSProperties = {
+const weekStyle: React.CSSProperties = {
   flex: "1",
   textAlign: "end",
   paddingRight: "0.5rem",
@@ -177,7 +177,7 @@ const weekStyle: CSSProperties = {
   userSelect: "none",
 };
 
-const dayWrapperStyle: CSSProperties = {
+const dayWrapperStyle: React.CSSProperties = {
   display: "grid",
   gridTemplateColumns: "repeat(7, 1fr)",
 };
@@ -188,7 +188,7 @@ const dayStyle = ({
 }: {
   index: number;
   isOtherMonth: boolean;
-}): CSSProperties => ({
+}): React.CSSProperties => ({
   padding: "0.5rem",
   textAlign: "end",
   height: "6rem",
@@ -201,7 +201,7 @@ const dayStyle = ({
   userSelect: "none",
 });
 
-const dateStyle = ({ isToday }: { isToday: boolean }): CSSProperties => {
+const dateStyle = ({ isToday }: { isToday: boolean }): React.CSSProperties => {
   return {
     color: "white",
     fontWeight: isToday ? 800 : "normal",
