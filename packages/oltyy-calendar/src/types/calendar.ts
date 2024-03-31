@@ -1,5 +1,5 @@
 // TODO: change to interface
-export interface Calendar {
+export interface CalendarType {
   year: number;
   month: number;
   day: number;
@@ -15,15 +15,15 @@ export interface Calendar {
   utc: string;
   iso: string;
   format: (pattern: string) => string;
-  add: (value: number, unit: string) => Calendar;
-  subtract: (value: number, unit: string) => Calendar;
-  startOf: (unit: string) => Calendar;
-  endOf: (unit: string) => Calendar;
-  diff: (calendar: Calendar, unit: string) => number;
-  isBefore: (calendar: Calendar) => boolean;
-  isAfter: (calendar: Calendar) => boolean;
-  isSame: (calendar: Calendar) => boolean;
-  isBetween: (start: Calendar, end: Calendar) => boolean;
+  add: (value: number, unit: string) => CalendarType;
+  subtract: (value: number, unit: string) => CalendarType;
+  startOf: (unit: string) => CalendarType;
+  endOf: (unit: string) => CalendarType;
+  diff: (calendar: CalendarType, unit: string) => number;
+  isBefore: (calendar: CalendarType) => boolean;
+  isAfter: (calendar: CalendarType) => boolean;
+  isSame: (calendar: CalendarType) => boolean;
+  isBetween: (start: CalendarType, end: CalendarType) => boolean;
   isLeapYear: () => boolean;
   isDST: () => boolean;
   isDSTShift: () => boolean;
@@ -36,7 +36,7 @@ export interface Calendar {
   valueOf: () => number;
   toISOString: () => string;
   toTimestamp: () => number;
-  toTimezone: (timezone: string) => Calendar;
+  toTimezone: (timezone: string) => CalendarType;
   toFormat: (pattern: string) => string;
   toDay: () => number;
   toMonth: () => number;
@@ -48,8 +48,8 @@ export interface Calendar {
   toTime: () => string;
   toDate: () => string;
   toDatetime: () => string;
-  toUTC: () => Calendar;
-  toLocal: () => Calendar;
-  toISO: () => Calendar;
+  toUTC: () => CalendarType;
+  toLocal: () => CalendarType;
+  toISO: () => CalendarType;
   toObject: () => Record<string, number>;
 }
