@@ -203,7 +203,6 @@ const dayStyle = ({
 
 const dateStyle = ({ isToday }: { isToday: boolean }): React.CSSProperties => {
   return {
-    color: "white",
     fontWeight: isToday ? 800 : "normal",
     padding: "0.25rem",
     borderRadius: isToday ? "9999px" : "0",
