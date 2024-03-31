@@ -9,4 +9,8 @@ export default defineConfig({
       cachedChecks: false,
     },
   },
+  build: {
+    outDir: "./dist",
+    emptyOutDir: true,
+  },
 });
