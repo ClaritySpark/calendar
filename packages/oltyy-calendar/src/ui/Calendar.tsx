@@ -1,15 +1,15 @@
-import React, { CSSProperties, useState } from "react";
+import { CSSProperties, useState } from "react";
 
 const TOTAL_CELLS = 42;
 const HALF_MONTH = 15;
 const WEEK_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 export const Calendar = () => {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const today = new Date();
+  const [currentDate, setCurrentDate] = useState(today);
 
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth();
-  const today = new Date();
 
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
   const lastDateOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -111,7 +111,6 @@ export const Calendar = () => {
             style={dayStyle({
               index,
               isOtherMonth: isOtherMonth(index),
-              isToday: isToday(date),
             })}
             onClick={() =>
               handleDateClick({
@@ -120,7 +119,7 @@ export const Calendar = () => {
               })
             }
           >
-            {date}
+            <span style={dateStyle({ isToday: isToday(date) })}>{date}</span>
           </div>
         ))}
       </div>
@@ -186,17 +185,14 @@ const dayWrapperStyle: CSSProperties = {
 const dayStyle = ({
   index,
   isOtherMonth,
-  isToday,
 }: {
   index: number;
   isOtherMonth: boolean;
-  isToday: boolean;
 }): CSSProperties => ({
   padding: "0.5rem",
   textAlign: "end",
   height: "6rem",
-  color: isOtherMonth ? "#7d7d7d80" : isToday ? "#88aaff" : "white",
-  fontWeight: isToday ? 800 : "normal",
+  color: isOtherMonth ? "#7d7d7d80" : "white",
   border: "1px solid #7d7d7d20",
   borderRight:
     index % 7 === 6 || index % 7 >= 0 ? "none" : "1px solid #053bd11f",
@@ -204,3 +200,14 @@ const dayStyle = ({
   borderLeft: index % 7 === 0 ? "none" : "1px solid #7d7d7d20",
   userSelect: "none",
 });
+
+const dateStyle = ({ isToday }: { isToday: boolean }): CSSProperties => {
+  return {
+    color: "white",
+    fontWeight: isToday ? 800 : "normal",
+    padding: "0.25rem",
+    borderRadius: isToday ? "9999px" : "0",
+    border: isToday ? "1px solid #053bd1" : "none",
+    backgroundColor: isToday ? "#053bd1" : "transparent",
+  };
+};
