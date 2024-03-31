@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'check eslint, typescript'
+
+# check eslint
+
+pnpm lint ||
+(
+  echo 'turbo lint failed'
+  false; 
+)
+
+# check build
+
+pnpm build ||
+(
+  echo 'build failed'
+  false; 
+)
+
+echo 'committing...'
